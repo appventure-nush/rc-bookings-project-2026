@@ -221,7 +221,7 @@ export default function App() {
           <strong>Research Congress Booking</strong>
         </p>
         <div className="headerRight">
-          <p className="version">Version 0.3</p>
+          <p className="version">Version 0.6</p>
           {isLoggedIn && (
             <button
               className="option logoutBtn"
