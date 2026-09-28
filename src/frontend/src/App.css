@@ -141,6 +141,12 @@ button.option:disabled {
   font-size: clamp(18px, 1.6vw, 26px) !important;
 }
 
+.authError {
+  color: #8b0000;
+  font-size: 15px;
+  margin: 0;
+}
+
 .fieldsRow {
   display: flex;
   flex-wrap: nowrap;
