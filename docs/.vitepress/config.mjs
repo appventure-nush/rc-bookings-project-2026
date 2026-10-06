@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'RCBooking',
   description: 'Developer docs for the Research Congress booking system',
-  base: '/RCBooking/',
+  base: '/rc-bookings-project-2026/',
   cleanUrls: true,
 
   themeConfig: {
@@ -25,6 +25,6 @@ export default defineConfig({
       ],
     },
     search: { provider: 'local' },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/trzaeta/RCBooking' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/appventure-nush/rc-bookings-project-2026' }],
   },
 })
