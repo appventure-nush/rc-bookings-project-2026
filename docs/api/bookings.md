@@ -1,4 +1,4 @@
-﻿# Bookings
+# Bookings
 
 ## Create a booking
 
