@@ -1,4 +1,4 @@
-# Bookings
+﻿# Bookings
 
 ## Create a booking
 
@@ -13,16 +13,18 @@ Creates a `draft` booking. Nobody is notified until the student submits it.
 | `sessionIds` | string[] | yes | One or more session IDs. |
 | `studentMessage` | string | no | Note to the teacher. |
 
-::: code-group
+**cURL**
 
-```bash [cURL]
+```bash
 curl -X POST http://localhost:3001/api/v1/bookings \
   -b cookies.txt \
   -H 'Content-Type: application/json' \
   -d '{"congressId": "f169df32-…", "teacherId": "user-teacher-1", "sessionIds": ["96103100-…"]}'
 ```
 
-```js [JavaScript]
+**JavaScript**
+
+```js
 const res = await fetch(`${API}/bookings`, {
   method: 'POST',
   credentials: 'include',
@@ -31,6 +33,6 @@ const res = await fetch(`${API}/bookings`, {
 })
 ```
 
-:::
-
 **Errors:** `SESSION_FULL` (400), `BOOKING_ALREADY_EXISTS` (409)
+
+[Back to contents](../README.md)

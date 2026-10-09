@@ -1,4 +1,4 @@
-# API overview
+﻿# API overview
 
 Base URL: `http://localhost:3001/api/v1`
 
@@ -15,3 +15,5 @@ Every error has the same shape:
   }
 }
 ```
+
+Next: [Bookings](bookings.md)

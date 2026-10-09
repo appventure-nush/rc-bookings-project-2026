@@ -4,5 +4,3 @@ src/backend/data/
 .env
 *.log
 src/backend/test/auth-session.test.js
-docs/.vitepress/dist
-docs/.vitepress/cache

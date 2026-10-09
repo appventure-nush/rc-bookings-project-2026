@@ -1,36 +1,26 @@
-# Bookings
+﻿# Quickstart
 
-## Create a booking
+You need **Node.js 20.12 or newer**.
 
-`POST /api/v1/bookings` · **Access:** student
+## 1. Start the backend
 
-Creates a `draft` booking. Nobody is notified until the student submits it.
+```bash
+cd src/backend
+npm install
+cp .env.example .env
+npm run dev
+```
 
-| Parameter | Type | Required | Description |
-| --- | --- | --- | --- |
-| `congressId` | string | yes | The congress to book. |
-| `teacherId` | string | yes | Teacher who will review it. |
-| `sessionIds` | string[] | yes | One or more session IDs. |
-| `studentMessage` | string | no | Note to the teacher. |
+## 2. Sign in as the demo student
 
-::: code-group
-
-```bash [cURL]
-curl -X POST http://localhost:3001/api/v1/bookings \
-  -b cookies.txt \
+```bash
+curl -X POST http://localhost:3001/api/v1/auth/login \
+  -c cookies.txt \
   -H 'Content-Type: application/json' \
-  -d '{"congressId": "f169df32-…", "teacherId": "user-teacher-1", "sessionIds": ["96103100-…"]}'
+  -d '{"role": "student"}'
 ```
 
-```js [JavaScript]
-const res = await fetch(`${API}/bookings`, {
-  method: 'POST',
-  credentials: 'include',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ congressId, teacherId, sessionIds }),
-})
-```
+> [!WARNING]
+> Demo login has no password. Disable it before deploying.
 
-:::
-
-**Errors:** `SESSION_FULL` (400), `BOOKING_ALREADY_EXISTS` (409)
+Next: [Configuration](configuration.md)
